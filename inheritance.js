@@ -6,7 +6,7 @@ function BankAccount(customerName, balance){
 // console.log(BankAccount.prototype);
 BankAccount.prototype.deposit = function(amount){
     this.balance+=amount;
-}
+} 
 const shivaBankAccount = new BankAccount('shiva',1000);
 function SavingsAccount(customerName,balance, limit){
     // this -> {}
