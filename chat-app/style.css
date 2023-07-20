@@ -1,0 +1,42 @@
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+
+.form-username{
+    display: none; /* this needs to be block */
+}
+
+.chatroom-container{
+    display: block; /* this needs to be none */
+    height: 100vh;
+    width: 100%;
+}
+
+.chatroom-header{
+    background-color: black;
+    color: white;
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+
+.messages{
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    background-color: #e1e1e1;
+}
+
+.message{
+    background-color: #075E54;
+    width: fit-content;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.sent{
+    align-self: flex-end;
+    background-color: #128C7E !important;
+}
