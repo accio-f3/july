@@ -23,3 +23,12 @@ sayHello.apply(obj,dbArray);
 // sayHello.call(obj,'amruth','raj');
 // sayHello();
 // console.log(obj);
+
+Function.prototype.myApply = function(obj,argsArray){
+    obj.fn=this; // I gave my defi of function to fn
+    const res = obj.fn(...argsArray);
+    delete obj.fn;
+    return res;
+}
+
+sayHello.myApply(obj,dbArray);

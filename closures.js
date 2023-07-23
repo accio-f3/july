@@ -45,3 +45,68 @@
 
 // scope is directly dependent on lexical env.
 // lexical -> as a term means in heirchy or in a sequence
+
+// Closure -> a function bind together with it's lexical environment
+
+// function x(){
+//     var a=7;
+//     function y(){
+//         console.log(a);
+//     }
+//     return y;
+// }
+
+// var a=8;
+
+// var z = x(); 
+// // x() is returing closure of y
+// // closure of y -> function y + lexical env of y
+
+// // console.log(z);
+
+// z();
+
+// function x(){
+//     var i=1;
+//     setTimeout(function(){
+//         console.log(i);
+//     },3000);
+// }
+
+// x();
+
+
+function x(){
+    for(var i=1;i<=5;i++){ // value of i is 6
+        setTimeout(function(){
+            console.log(i);
+        },i*1000);
+    }
+}
+
+
+
+{
+    var i=// it was increasing with iterations
+    function a(){
+        console.log(i);
+    }
+    a();
+}
+x();
+
+// 1 2 3 4 5
+// 5 5 5 5 5
+// 6 6 6 6 6
+
+function a(){
+    console.log(i);
+}
+// function-> time from starting point
+// a       -> 1 sec // a will be executed
+// a       -> 2 sec
+// a       -> 3 sec
+// a       -> 4 sec
+// a       -> 5 sec
+
+// value of i is 6
