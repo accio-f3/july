@@ -12,7 +12,7 @@ function sayHello(arg1,arg2){
 // sayHello.apply(obj,[]);
 // sayHello.call(obj,'tes1','tes2');
 let dbArray=['test1','test2','test3'];
-sayHello.apply(obj,dbArray);
+// sayHello.apply(obj,dbArray);
 // sayHello.call(obj,dbArray);
 // console.log(sayHello);
 
@@ -32,3 +32,16 @@ Function.prototype.myApply = function(obj,argsArray){
 }
 
 sayHello.myApply(obj,dbArray);
+
+// (argArray) -> ['abc',1];
+// Function.prototype.test = function(){
+//     console.log(this);
+// }
+
+// function abc(){
+
+// }
+
+// function random(){
+
+// }
