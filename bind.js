@@ -16,18 +16,39 @@ function sayHello(arg1,arg2){
 // __proto__ & prototype
 // Bind
 
+  
+// // Function.prototype.myBind = function(obj,...args){
+// //     obj.fn=this;
+// //     const returnFn = function(...newArgs){
+// //         const res = obj.fn(...args,...newArgs);
+// //         return res;
+// //     }
+// //     return returnFn;
+// // }
+
 Function.prototype.myBind = function(obj,...args){
-    obj.fn=this;
+    let fn=this; // saved function defi in fn
     const returnFn = function(...newArgs){
-        const res = obj.fn(...args,...newArgs);
-        return res;
+        // this should have defi of fn
+        // call, apply
+        return fn.call(obj,...args,...newArgs); // binded function
+        // defi in my function
     }
     return returnFn;
 }
 
 const updatedSayHello=sayHello.myBind(obj);
+// updatedSayHello = function(...newArgs){
+//     // this should have defi of fn
+//     // call, apply
+//     return fn.call(obj,...args,...newArgs); // binded function
+//     // defi in my function
+// }
 updatedSayHello('test1','test2');
 updatedSayHello('t','q');
+
+// Bind ??? it's .call method in a function
+
 
 // function abc(){
 //     //doing something
@@ -38,10 +59,21 @@ updatedSayHello('t','q');
 // }
 
 
-function a(y,z){ // ...args 
+// function a(y,z){ // ...args 
 
-}
+// }
 
-function aClone(y,z){ // ...newArgs
-    return a(y,z);
-}
+// function aClone(y,z){ // ...newArgs
+//     return a(y,z);
+// }
+
+// priority of any frontend project
+// functionality
+// optimisation
+// style
+
+// - [ ] Promises (Sunday)
+// - [ ] Contest discussion(tuesday)
+// - [ ] Signup Page +razor pay(28th July)
+// - [ ] Debounce and throttle (Monday)
+// - [ ] Event delegation (Monday)
